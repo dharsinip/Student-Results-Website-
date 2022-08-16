@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STUDENTS' RESULT MANAGEMENT SYSTEM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="servicesstyles.css">  
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="app.js"></script>  
+</head>
+<style>
+    .list{
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #00fecb;
+    margin-left: 35%;
+}
+
+
+ul li{
+    display: flex;
+    justify-content: space-between;
+}
+table{
+    color: white;
+    border-color:#00fecb;
+    
+}
+label{
+    color: white;
+}
+</style>
+<body ng-app="checkOffApp">
+    <header>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="">
+        </div>
+<ul class="nav-area">
+<li><a href="home.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="adminlogin.html">Admin Login</a></li>
+<li><a href="studentlogin.html">Student Login</a></li>
+<li><a href="overall.html">Overall Performance</a></li>
+</ul>
+</div>
+<div class="welcome-text">
+    <h1>REGISTERED&nbsp<span>STUDENTS'&nbsp</span>LIST </h1>
+    
+    </div>
+</header>
+<div class="to-buy list" ng-controller="toBuyController as toBuy">
+    <label><b>Registered Students<br></b></label>
+    <table border="1">
+    <tr><b><td style="width: 4cm;">Name</td><td style="width: 4cm;">Semester</td></b></tr>
+</table>
+    <ul class="items-list">
+        <li ng-repeat="item in toBuy.items">
+            <table border="1">
+            <tr ><td style="width: 4cm;">{{item.name|uppercase}}</td><td style="width: 4cm;">{{item.quantity}}</td></tr>
+            </table>
+            <button class="button" ng-click="toBuy.moveItem($index)">Remove</button>
+        </li>
+    </ul>
+    <div class="message" ng-if="!toBuy.items.length">
+        <h5>No students registered</h5>
+    </div>
+</div>
+<div class="already-bought list" ng-controller="alreadyBoughtController as alreadyBought">
+    <label><b>Students Removed</b></label>
+    
+    <ul class="items-list">
+        <li ng-repeat="item in alreadyBought.items">
+            <table border="1">
+                <tr ><td style="width: 4cm;">{{item.name|uppercase}}</td><td style="width: 4cm;">{{item.quantity}}</td></tr>
+                </table>
+        </li>
+    </ul>
+    <div class="message" ng-hide="alreadyBought.items.length">
+        <h5 style="color: white;">No students removed</h5>
+    </div>
+</div>
+
+
+</body>
+</html>

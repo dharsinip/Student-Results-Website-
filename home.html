@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STUDENTS' RESULT MANAGEMENT SYSTEM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">    
+</head>
+<body>
+    <header>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="">
+        </div>
+<ul class="nav-area">
+<li><a href="home.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="adminlogin.html">Admin Login</a></li>
+<li><a href="studentlogin.html">Student Login</a></li>
+<li><a href="overall.html">Overall Performance</a></li>
+
+</ul>
+</div>
+<div class="welcome-text">
+        <h1>
+STUDENTS' RESULT <span>MANAGEMENT SYSTEM</span></h1>
+
+    </div>
+</header>
+<img src="images/picc.jpg" usemap="#sm" style="margin:0 30%;">
+<br/>
+<br/>
+
+<map name="sm">
+    <area shape="rect" coords="3,263,211,78" alt="books" href="books.html">
+    <area shape="poly" coords="295,240,343,244,391,245,428,242,475,242,491,228,457,216,412,210,372,219" alt="table" href="table.html">
+    <area shape="rect" coords="211,134,285,319" alt="student1" href="student.html">
+    <area shape="rect" coords="293,148,400,219" alt="student2" href="student.html">
+</map>
+
+<div id="demo">
+    <button type="button" class="btn" onclick="loadDoc()">CONTACT US</button>
+    </div>
+    
+    <script>
+    function loadDoc() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("demo").innerHTML =
+          this.responseText;
+        }
+      };
+      xhttp.open("GET", "ajax.txt", true);
+      xhttp.send();
+    }
+    </script>
+
+</body>
+</html>

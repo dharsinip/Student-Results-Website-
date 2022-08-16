@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STUDENTS' RESULT MANAGEMENT SYSTEM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> 
+    <style>
+        * {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(images/back.jpeg);
+}
+.wrapper {
+	width: 1170px;
+	margin: auto;
+}
+header {
+	
+	height: 40vh;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+.nav-area {
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+}
+.nav-area li {
+	display: inline-block;
+}
+.nav-area li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: poppins;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.nav-area li a:hover {
+	background: #fff;
+	color: #333;
+}
+.logo {
+	float: left;
+}
+.logo img {
+	width: 50px;
+    height:50px;
+	padding: 15px 0;
+}
+#q{
+    height:70px;
+}
+.welcome-text {
+	position: absolute;
+	width: 600px;
+	height: 200px;
+	margin: 10% 30%;
+	text-align:top;
+}
+.welcome-text h1 {
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 50px;
+}
+.welcome-text h1 span {
+	color: #00fecb;
+}
+.welcome-text a {
+	border: 1px solid #fff;
+	padding: 10px 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 20px;
+	display: inline-block;
+	color: #fff;
+}
+.welcome-text a:hover {
+	background: #fff;
+	color: #333;
+}
+/*resposive*/
+
+@media (max-width:600px) {
+	.wrapper {
+		width: 100%;
+	}
+	.logo {
+		float: none;
+		width: 50%;
+		text-align: center;
+		margin: auto;
+	}
+	.nav-area {
+		float: none;
+		margin-top: 0;
+	}
+	.nav-area li a {
+		padding: 5px;
+		font-size: 11px;
+	}
+	.nav-area {
+		text-align: center;
+	}
+	.welcome-text {
+		width: 100%;
+		height: auto;
+		margin: 30% 0;
+	}
+	.welcome-text h1 {
+		font-size: 30px;
+	}
+}
+
+/*cards*/
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #bordering{
+    margin-left: 47%;
+    text-align: center;
+    width: 300px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    align-content: center;
+    
+  }
+  /* Add padding to containers */
+.container {
+    margin: 5% 25%;
+    padding: 16px;
+    width:25cm;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=number] {
+    width: 95%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=number]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for the submit button */
+  .registerbtn {
+    background-color:#00fecb;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .registerbtn:hover {
+    opacity: 1;
+  }
+  
+  /* Add a blue text color to links */
+  a {
+    color: dodgerblue;
+  }
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="">
+        </div>
+<ul class="nav-area">
+<li><a href="home.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="adminlogin.html">Admin Login</a></li>
+<li><a href="studentlogin.html">Student Login</a></li>
+<li><a href="overall.html">Overall Performance</a></li>
+</ul>
+</div>
+<div class="welcome-text">
+    <h1 style="margin-right: 30%;"><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFACULTY</span>&nbsp&nbspDETAILS</h1>
+    </div>
+</header>
+<div class="container">
+  <form method="GET" action="http://localhost:5000/api/employees">
+    <label><b>Department:</b></label>
+    <input type="text" placeholder="Enter Department" name="dept" required>
+    <input type="submit" value="submit" class="registerbtn"/>
+  </form>
+</div>
+</body>
+</html>

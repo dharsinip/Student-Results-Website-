@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STUDENTS' RESULT MANAGEMENT SYSTEM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="studregstyles.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>   
+</head>
+<body>
+    <header>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="">
+        </div>
+<ul class="nav-area">
+<li><a href="home.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="adminlogin.html">Admin Login</a></li>
+<li><a href="studentlogin.html">Student Login</a></li>
+<li><a href="overall.html">Overall Performance</a></li>
+</ul>
+</div>
+<div class="welcome-text">
+    <h1><span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSTUDENT &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspREGISTRATION&nbsp</span>FORM </h1>
+    
+    </div>
+</header>
+<form  ng-app="myApp"  ng-controller="validateCtrl" name="myForm" novalidate>
+    <div class="container">
+      <p>Please fill in this form to create a new student record.</p>
+      <hr>
+  
+      <label><b>First Name</b></label>
+      <input type="text" placeholder="Enter First Name" name="fname" ng-model="fname" id="fname" required>
+      <span style="color:red" ng-show="myForm.fname.$dirty && myForm.fname.$invalid">
+      <span ng-show="myForm.fname.$error.required">First Name is required.<br></span>
+    </span>
+    
+
+      <label><b>Last Name</b></label>
+      <input type="text" placeholder="Enter Last Name" name="lname" ng-model="lname" id="lname" required>
+      <span style="color:red" ng-show="myForm.lname.$dirty && myForm.lname.$invalid">
+      <span ng-show="myForm.lname.$error.required">Last Name is required.<br></span>
+    </span>
+  
+
+      <label><b>Register Number</b></label>
+      <input type="text" placeholder="Enter Register Number" name="rno" ng-model="rno"  id="rno" required>
+      <span style="color:red" ng-show="myForm.rno.$dirty && myForm.rno.$invalid">
+        <span ng-show="myForm.rno.$error.required">Register Number is required.<br></span>
+      </span>
+
+      <label><b>Semester</b></label>
+      <input type="text" placeholder="Enter Semester" name="sem" ng-model="sem" id="sem" required>
+      <span style="color:red" ng-show="myForm.sem.$dirty && myForm.sem.$invalid">
+        <span ng-show="myForm.sem.$error.required">Semester is required.<br></span>
+      </span>
+  
+      <label><b>Email Id</b></label>
+      <input type="text" placeholder="Enter Email ID" name="email" ng-model="email" id="email" required>
+      <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+      <span ng-show="myForm.email.$error.required">Email is required.<br></span>
+      <span ng-show="myForm.email.$error.email">Invalid email address.<br></span>
+      </span>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" ng-model="psw"  id="psw" required>
+      <span style="color:red" ng-show="myForm.psw.$dirty && myForm.psw.$invalid">
+      <span ng-show="myForm.psw.$error.required">Password is required.<br></span>
+    </span>
+
+      
+  
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat"  ng-model="pswrepeat" id="psw-repeat" required>
+      <span style="color:red" ng-show="myForm.pswrepeat.$dirty && myForm.pswrepeat.$invalid">
+        <span ng-show="myForm.pswrepeat.$error.required">Repeat Password is required.<br></span>
+      </span>
+
+      
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+  
+      <input type="submit" class="registerbtn" value="Register"
+  ng-disabled="myForm.fname.$dirty && myForm.fname.$invalid ||myForm.lname.$dirty && myForm.lname.$invalid ||myForm.rno.$dirty && myForm.rno.$invalid ||myForm.sem.$dirty && myForm.sem.$invalid ||myForm.psw.$dirty && myForm.psw.$invalid ||myForm.pswrepeat.$dirty && myForm.pswrepeat.$invalid ||
+  myForm.email.$dirty && myForm.email.$invalid">
+
+    </div>
+    
+    <div class="container signin">
+      <p>Already have an account? <a href="studentlogin.html">Sign in</a>.</p>
+    </div>
+  </form>
+  <script>
+    var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+  $scope.fname = '';
+  $scope.lname = '';
+  $scope.rno = '';
+  $scope.sem = '';
+  $scope.email = '';
+  $scope.psw = '';
+  $scope.pswrepeat = '';
+
+});
+  </script>
+
+</body>
+</html>

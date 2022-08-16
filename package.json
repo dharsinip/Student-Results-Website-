@@ -1,0 +1,45 @@
+{
+  "name": "angularjs-webpack-starter",
+  "version": "0.0.1",
+  "description": "An example application demonstrating modern AngularJS development using TypeScript & WebPack.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:dev",
+    "prebuild:dev": "npm run clean:dev",
+    "build:dev": "webpack --config webpack-dev.config.js",
+    "start": "npm run serve:dev",
+    "serve:dev": "webpack-dev-server --config webpack-dev.config.js"
+  },
+  "keywords": [
+    "AngularJS",
+    "TypeScript",
+    "WebPack",
+    "NPM"
+  ],
+  "author": "Frederik Prijck <frederik.prijck@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^13.13.21",
+    "@types/webpack-env": "^1.15.3",
+    "file-loader": "^5.1.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.12.3",
+    "style-loader": "^1.2.1",
+    "tslint": "^5.20.1",
+    "tslint-loader": "^3.6.0",
+    "typescript": "^3.9.7",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.28",
+    "angular": "^1.8.0",
+    "bootstrap": "^4.5.2",
+    "cors": "^2.8.5",
+    "mongodb": "^4.7.0"
+  }
+}

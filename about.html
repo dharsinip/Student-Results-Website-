@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STUDENTS' RESULT MANAGEMENT SYSTEM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="aboutstyles.css">    
+</head>
+<body>
+    <header>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="">
+        </div>
+<ul class="nav-area">
+<li><a href="home.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="adminlogin.html">Admin Login</a></li>
+<li><a href="studentlogin.html">Student Login</a></li>
+<li><a href="overall.html">Overall Performance</a></li>
+</ul>
+</div>
+<div class="welcome-text">
+<p><span>The Students' Result Management System</span> provides the results of the students with just a click of a button.<br>It is an efficient way to manage students' results and also gives an overall picture of the student's performance. </p>
+
+</div>
+</header>
+
+
+<body ng-app="myApp">
+
+<h3 style="text-align:center  ;color:white;">Want to see a video demonstrating the website?&nbsp<input style="height: 40px;" type="checkbox" ng-model="myCheck"></h3>
+<br><br><br><br><br><br>
+<div ng-show="myCheck">
+   <video id="video" width="80%" controls>
+      <source src="images/video.mp4" type="video/mp4">
+      Your browser does not support HTML video.
+    </video>
+</div>
+
+<script>
+var app = angular.module('myApp', ['ngAnimate']);
+</script>
+
+
+</body>
+</html>

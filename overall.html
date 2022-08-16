@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STUDENTS' RESULT MANAGEMENT SYSTEM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="overallstyles.css">    
+</head>
+<body ng-app="">
+    <header>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="">
+        </div>
+<ul class="nav-area">
+<li><a href="home.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="adminlogin.html">Admin Login</a></li>
+<li><a href="studentlogin.html">Student Login</a></li>
+<li><a href="overall.html">Overall Performance</a></li>
+</ul>
+</div>
+<div class="welcome-text">
+    <h1><span>OVERALL STUDENTS'&nbsp</span>PERFORMANCE</h1>
+    
+    </div>
+</header>
+<h3>Select the respective year from the dropdown:</h3>
+<select ng-model="myVar">
+  <option value="first">FIRST YEAR
+  <option value="second">SECOND YEAR
+  <option value="third">THIRD YEAR
+  <option value="fourth">FOURTH YEAR    
+</select>
+<br><br><br><br>
+
+<hr>
+<div ng-switch="myVar">
+  <div ng-switch-when="first">
+     <h1>FIRST YEAR RESULTS' STATISTICS</h1>
+     <img src="images/result.png" style="margin:0 30%;">
+  </div>
+  <div ng-switch-when="second">
+     <h1>SECOND YEAR RESULTS' STATISTICS</h1>
+     <img src="images/resul.png" style="margin:0 30%; height:10cm;width:15cm">
+    </div>
+  <div ng-switch-when="third">
+     <h1>THIRD YEAR RESULTS' STATISTICS</h1>
+     <img src="images/result.png" style="margin:0 30%;">   
+  </div> 
+  <div ng-switch-when="fourth">
+    <h1>FOURTH YEAR RESULTS' STATISTICS</h1>
+    <img src="images/resul.png" style="margin:0 30%; height:10cm;width:15cm">
+ </div>
+  <div ng-switch-default>
+     <p></p>
+  </div>
+</div>
+<hr>
+</body>
+</html>

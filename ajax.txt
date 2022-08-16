@@ -1,0 +1,13 @@
+<section id="footer" style="background-color:#87e3d1;">
+      <!-- Contact us -->
+      <h4 style="padding-bottom: 40px; font-weight: bold; color: white;text-align:center;">
+          CONTACT US
+      </h4>
+      <p>SSN College of Engineering,SH 49A, Kalavakkam, Chennai , Tamil Nadu 603110</p>
+      
+              <p>044 2746 9700</p>
+          
+              <p>admissions@ssn.edu.in</p>
+
+      <p class="copyright">Copyright © 2021 SSN. All Rights Reserved.</p>
+  </section>
